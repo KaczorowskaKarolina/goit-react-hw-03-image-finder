@@ -1,5 +1,5 @@
-import React from 'react';
-import './styles.css';
+import React, { useEffect } from 'react';
+import './modal.css';
 
 const Modal = ({ show, imageUrl, onClose }) => {
   const handleCloseModal = (e) => {
@@ -7,6 +7,20 @@ const Modal = ({ show, imageUrl, onClose }) => {
       onClose();
     }
   };
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [onClose]);
 
   return (
     show && (
@@ -20,3 +34,4 @@ const Modal = ({ show, imageUrl, onClose }) => {
 };
 
 export default Modal;
+

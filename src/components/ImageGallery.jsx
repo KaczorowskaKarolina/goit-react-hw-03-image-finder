@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './imageGallery.css';
 
 const ImageGallery = ({ images, openModal }) => {
   return (

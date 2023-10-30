@@ -1,14 +1,18 @@
 import React from 'react';
-import SpinnerLoader from 'react-loader-spinner'; 
+import { Hearts } from 'react-loader-spinner';
+import './loader.css';
 
 const Loader = () => {
   return (
-    <Loader
-      type="Puff"
-      color="#00BFFF"
-      height={100}
-      width={100}
-    />
+    <Hearts 
+  height="80"
+  width="80"
+  color="#ef71f6"
+  ariaLabel="hearts-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './searchbar.css';
 
 const Searchbar = ({ keyword, setKeyword, handleSearch }) => {
   const handleSubmit = (e) => {
@@ -9,7 +9,7 @@ const Searchbar = ({ keyword, setKeyword, handleSearch }) => {
 
   return (
     <header className="Searchbar">
-      <form className="SearchForm" onSubmit={handleSubmit}>
+      <form className="SearchForm" id="SearchForm" onSubmit={handleSubmit}>
         <button type="submit" className="SearchForm-button">
           <span className="SearchForm-button-label">Search</span>
         </button>
