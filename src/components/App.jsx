@@ -3,7 +3,8 @@ import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';
 import Button from './Button';
 import Modal from './Modal';
-import Loader from './Loader';
+import CustomLoader from './Loader';
+
 import './styles.css';
 
 const App = () => {
@@ -52,7 +53,7 @@ const App = () => {
     <div className="App">
       <Searchbar keyword={keyword} setKeyword={setKeyword} handleSearch={handleSearch} />
       <ImageGallery images={images} openModal={openModal} />
-      {loading && <Loader />}
+      {loading && <CustomLoader />}
       <Button show={images.length > 0 && !loading} onClick={handleChangePage} />
       <Modal show={showModal} imageUrl={modalImage} onClose={closeModal} />
     </div>

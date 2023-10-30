@@ -1,10 +1,10 @@
 import React from 'react';
-import Loader from 'react-loader-spinner'; 
+import SpinnerLoader from 'react-loader-spinner'; 
 
-const CustomLoader = () => {
+const Loader = () => {
   return (
     <Loader
-      type="Oval"
+      type="Puff"
       color="#00BFFF"
       height={100}
       width={100}
@@ -12,4 +12,4 @@ const CustomLoader = () => {
   );
 };
 
-export default CustomLoader;
+export default Loader;
